@@ -1,0 +1,60 @@
+
+body{
+    padding:5%;
+    font:300 1.25em/1.6 monospace;
+    background:#fff;
+    color:#000;
+}
+
+main{
+    text-align: center
+}
+
+main .game {
+    margin: 0 auto;
+    width: 35em;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 100%;    
+}
+
+li{
+    margin: 0.6em 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+li a {
+    border-bottom: 4px solid transparent;
+    padding: 1em 0.6em;
+}
+
+li a:hover,
+li a:active,
+li a.active {
+    border-bottom: 4px solid #40A4C8;
+}
+
+.game img{
+    width: 8.45em;
+    height: 8.25em;
+}
+
+h1{
+    font-family:"Helvetica Neue",sans-serif;
+    line-height:1;
+    font-weight:300;
+    margin-bottom:1em;
+}
+
+#result{
+    padding-top: 2em;
+}
