@@ -28,33 +28,33 @@ const computerChoice = () => {
 const compare = (choice1,choice2) => {
     const firstMessage = "You choose "+choice1+", computer choose "+choice2+"."
     if (choice1 === choice2) {
-        return [firstMessage+" It's a tie!",2];
+        return {'message': firstMessage+" It's a tie!",'result':2};
     }
     if (choice1 === "rock") {
         if (choice2 === "scissors") {
             /** user wins */
-            return [firstMessage+" Rock beats scissors. You Win!",1];
+            return {'message': firstMessage+" Rock beats scissors. You Win!",'result':1};
         } else {
             /** computer wins */
-            return [firstMessage+" Paper beats rock. You Lost!",0];
+            return {'message': firstMessage+" Paper beats rock. You Lost!",'result':0};
         }
     }
     if (choice1 === "paper") {
         if (choice2 === "rock") {
             /** user wins */
-            return [firstMessage+" Paper beats rock. You win!",1];
+            return {'message': firstMessage+" Paper beats rock. You win!",'result':1};
         } else {
             /** computer wins */
-            return [firstMessage+" Scissors beat paper. You lost!",0];
+            return {'message': firstMessage+" Scissors beats paper. You lost!",'result':0};
         }
     }
     if (choice1 === "scissors") {
         if (choice2 === "paper") {
             /** user wins */
-            return [firstMessage+" Scissors beat paper. You win!",1];
+            return {'message': firstMessage+" Scissors beats paper. You win!",'result':1};
         } else {
             /** computer wins */
-            return [firstMessage+" Rock beat scissors. You lost!",1];
+            return {'message': firstMessage+" Rock beats scissors. You lost!",'result':0};
         }
     }
 };
@@ -66,12 +66,12 @@ const plural = (result) => (result > 1) ? "s" :""
  * @param {string} choice1 User's choice
  */
 var play = (choice1) => {
-    const choice = computerChoice();
-    const results = compare(choice1,choice.toLowerCase());
+    const choice2 = computerChoice();
+    const results = compare(choice1,choice2.toLowerCase());
     /**Displays result */
-    document.getElementById('result').innerHTML = results[0];
+    document.getElementById('result').innerHTML = results.message;
     score.played++
-    switch(results[1]){
+    switch(results.result){
         case 0:
             score.lost++
             break
@@ -85,5 +85,3 @@ var play = (choice1) => {
     document.getElementById('score').innerHTML =  "You played "+ score.played +" game"+plural(score.played)+" with "+ score.win +" win and "+ score.tie +" tie. You lost "+ score.lost +" game"+plural(score.lost)
     
 }
-
-
