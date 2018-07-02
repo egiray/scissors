@@ -47,7 +47,7 @@ test('User selects scissors and computer selects paper', ()=>{
 
 test('User selects scissors and computer selects rock', ()=>{
     expect(compare("scissors","rock")).toEqual({
-        'message':'You choose scissors, computer choose rock. Rock beats scissors. You lost!',
+        'message':'You choose scissors, computer choose rock. Rock beats scissors. You Lost!',
         'result':0
     })
 })

@@ -42,19 +42,19 @@ const compare = (choice1,choice2) => {
     if (choice1 === "paper") {
         if (choice2 === "rock") {
             /** user wins */
-            return {'message': firstMessage+" Paper beats rock. You win!",'result':1};
+            return {'message': firstMessage+" Paper beats rock. You Win!",'result':1};
         } else {
             /** computer wins */
-            return {'message': firstMessage+" Scissors beats paper. You lost!",'result':0};
+            return {'message': firstMessage+" Scissors beats paper. You Lost!",'result':0};
         }
     }
     if (choice1 === "scissors") {
         if (choice2 === "paper") {
             /** user wins */
-            return {'message': firstMessage+" Scissors beats paper. You win!",'result':1};
+            return {'message': firstMessage+" Scissors beats paper. You Win!",'result':1};
         } else {
             /** computer wins */
-            return {'message': firstMessage+" Rock beats scissors. You lost!",'result':0};
+            return {'message': firstMessage+" Rock beats scissors. You Lost!",'result':0};
         }
     }
 };
