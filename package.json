@@ -4,12 +4,16 @@
   "description": "",
   "main": "scripts.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jest": "^23.2.0",
-    "rewire": "^4.0.1"
-  }
+    "rewire": "^4.0.1",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
