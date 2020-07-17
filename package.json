@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "jest": "^23.2.0",
-    "rewire": "^4.0.1"
+    "rewire": "^5.0.0"
   }
 }
